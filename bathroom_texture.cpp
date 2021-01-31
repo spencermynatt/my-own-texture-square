@@ -59,10 +59,10 @@ int main()
 	//we want to draw these vertices in.
 	float vertices[] = {
 		// Positions        // Texture Coords
-		 0.5f,  0.5f, 0.0f, 1.0f, 1.0f, // Top Right
-		 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // Bottom Right
-		-0.5f, -0.5f, 0.0f, 0.0f, 0.0f, // Bottom Left
-		-0.5f,  0.5f, 0.0f, 0.0f, 1.0f  // Top Left 
+		 0.5f,  0.5f, 0.0f, 1.0f, 1.0f, // 0
+		0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // 1
+		-0.5f, -0.5f, 0.0f, 0.0f, 0.0f, // 2
+		-0.5f,  0.5f, 0.0f, 0.0f, 1.0f  // 3
 	};
 
 	int elements[] = {
