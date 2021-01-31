@@ -18,10 +18,10 @@ const char* fragment_shader =
 "#version 430 core\n"
 "out vec4 new_textures;\n"
 "in vec2 evt;\n"
-"uniform sampler2D sampTexture;\n"
+"uniform sampler2D sampTexture;\n" //variable for empty_Texture to put data in
 "void main()\n"
 "{\n"
-"new_textures = texture(sampTexture, evt);\n"
+"new_textures = texture(sampTexture, evt);\n" // if you set it to zero, it won't run
 "}\n\0";
 int main()
 {
