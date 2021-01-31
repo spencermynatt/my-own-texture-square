@@ -57,6 +57,7 @@ int main()
 	glLinkProgram(program);
 	//store only the unique vertices and then specify the order at which
 	//we want to draw these vertices in.
+	
 	float vertices[] = {
 		// Positions        // Texture Coords
 		 0.5f,  0.5f, 0.0f, 1.0f, 1.0f, // 0
@@ -88,10 +89,14 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
 	// Position attribute
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0); //we can't set zero to stride because our array is not tightly packed with one attribute
+	// each coordinate in each vertex takes up 4 bytes. That means it takes 20 bytes each line
+	//just setting it to zero will confused opengl into not knowing where to separate the data
+	
 	glEnableVertexAttribArray(0);
 	// TexCoord attribute
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+	//3 *size of float is just where it starts
 	glEnableVertexAttribArray(1);
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
