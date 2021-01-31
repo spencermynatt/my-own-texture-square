@@ -67,7 +67,7 @@ int main()
 
 	int elements[] = {
 		0, 1, 3, // first	
-		1, 2, 3, // second	
+		2, 3, 0, // second	
 	};
 
 	unsigned int VBO;
