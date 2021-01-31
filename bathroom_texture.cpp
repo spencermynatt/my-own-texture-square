@@ -66,7 +66,7 @@ int main()
 	};
 
 	int elements[] = {
-		0, 1, 3, // first	
+		0, 1, 2, // first	
 		2, 3, 0, // second	
 	};
 
