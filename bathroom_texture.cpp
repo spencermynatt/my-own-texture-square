@@ -115,7 +115,7 @@ int main()
 	unsigned char* data = SOIL_load_image("resources/bathroom.jpg", &width, &height, &nrchannels, 0);
 
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-	glGenerateMipmap(GL_TEXTURE_2D);
+	glGenerateMipmap(GL_TEXTURE_2D); //BINDS THE ACTUAL TEXTURE TO THE SQUARE
 	while (!glfwWindowShouldClose(window))
 	{
 		glClearColor(0.2f, 0.7f, 0.5f, 2.0f);
