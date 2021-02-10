@@ -93,6 +93,7 @@ int main()
 	// each coordinate in each vertex takes up 4 bytes. That means it takes 20 bytes each line
 	//just setting it to zero will confused opengl into not knowing where to separate the data
 	//void* is a memory address without a type.
+	//stride of an array (also referred to as increment, pitch or step size) is the number of locations in memory between beginnings of successive array elements
 	glEnableVertexAttribArray(0);
 	// TexCoord attribute
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
