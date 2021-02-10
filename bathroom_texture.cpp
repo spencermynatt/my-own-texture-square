@@ -92,7 +92,7 @@ int main()
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0); //we can't set zero to stride because our array is not tightly packed with one attribute
 	// each coordinate in each vertex takes up 4 bytes. That means it takes 20 bytes each line
 	//just setting it to zero will confused opengl into not knowing where to separate the data
-	
+	//void* is a memory address without a type.
 	glEnableVertexAttribArray(0);
 	// TexCoord attribute
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
